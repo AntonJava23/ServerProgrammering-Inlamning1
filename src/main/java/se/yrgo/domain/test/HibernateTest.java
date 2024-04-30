@@ -26,6 +26,10 @@ public class HibernateTest {
         newTutor.addStudentToTeachingGroup(student2);
         newTutor.addStudentToTeachingGroup(student3);
 
+        // Lägg nu till lite query kod för att hämta studenter med deras handledares namn.
+
+
+        // Hämta nu alla studenter för en särskild handledare från databasen och skriv ut dem.
         Tutor theTutor = session.get(Tutor.class, 21);
         List<Student> students = theTutor.getTeachingGroup();
         for (Student student : students) {
@@ -38,7 +42,6 @@ public class HibernateTest {
 //        session.save(student2);
 //        session.save(student3);
 //        session.save(newTutor);
-
 
         tx.commit();
         session.close();

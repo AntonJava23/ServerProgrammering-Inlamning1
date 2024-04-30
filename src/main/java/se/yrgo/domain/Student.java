@@ -14,6 +14,7 @@ public class Student {
     private String enrollmentID;
     @Column(length = 30)
     private String name;
+    @ManyToOne
     private Tutor tutor;
 
     public String getTutorName() {
